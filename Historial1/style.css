@@ -1,0 +1,109 @@
+* {
+    padding: 0%;
+    margin: 0%;
+}
+header{
+    background-color: #FC9909;
+    height: 6em;
+    width: 100%;
+    padding-top: 25px;
+    display: flex;
+    justify-content: space-between ;
+    
+}
+.titulo{
+    display: flex;
+    justify-content: center;
+    width: 41vh;
+    height: 5em;
+}
+h1{
+    width: 100%;
+    height: 1em;
+    font-size: calc(1.375rem  + 1.5vw);
+    margin: 0%;
+    margin-left: 20px;
+    
+}
+.buscador {
+    display: flex;
+    justify-content:center ;
+    width: 62vh;
+    height: 4em;
+    padding-top: 15px;
+}
+
+.buscar {
+    font-size: calc(13px  + 0vw);
+    width: 15em;
+    height: 2em;
+    padding-left: 10px;
+}
+
+.button1 {
+    font-size: calc(13px  + 0vw);
+    width: 5em;
+    height: 2em;
+    background-color: white;
+    margin-left: 7px;
+    margin-top: 3px;
+    padding: 0%;
+    border: 0px;
+}
+nav {
+    height: 2em;
+    width: 100%;
+}
+
+.father_box{
+    display: flex;
+    justify-content: space-evenly;
+    
+    width: 100%;
+    height: 50em;
+    
+}
+.left_box{
+    height: 80em;
+    width: 60%;
+    font-size: 10px;
+
+    
+    
+}
+.fecha{
+    background-color: #FC9909;
+    height: 2em;
+    font-size: 2em;
+    padding-top: 3%;
+}
+.borrar{
+    
+    background-color: #FC9909;
+    font-size: calc(1.5em  + 0vw);
+    
+    height: 2.5em;
+    width: 8em;
+    
+}
+.historial{
+    background-color: rgb(173, 165, 165);
+    height: 36em;
+    font-size: 2em;
+    
+}
+.right_box{
+    height: 80em;
+    width: 20%;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+}
+.final {
+    color: white;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    overflow: hidden;
+    font-size: 22px;
+    padding: 1%;
+}

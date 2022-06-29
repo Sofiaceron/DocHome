@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+        rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="citas.css">
+    <link rel="stylesheet" href="perfil.css">
+    <link rel="stylesheet" href="paginap.css">
+    <title>Mi Perfil - DocHome</title>
+</head>
+
+<body>
+    <section>
+        <div class="container-flex">
+            <div class="cj p-2">
+                <a class="nav-link d-flex justify-content-end px-4 " href="../Pagina Principal/index.html">Cerrar
+                    Sesión</a>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container-flex">
+
+            <div class="ro">
+                <article class="col-md-3">
+
+                    <div class="d-flex">
+
+                        <nav class=" caja ">
+                            <div class="row ">
+                                <ul class="nav d-flex flex-column ">
+                                    <br>
+                                    <li class="p-3 flex-column flex-wrap">
+                                        <img class="foto" src="img/usuario.webp" alt="">
+                                        <h4 class="text-center">Alejandra Sandoval</h4>
+                                    </li>
+                                    <br>
+                                    <li class=" d-flex lista  flex-wrap ">
+                                        <a class="nav-link color " href="../Paciente/perfilpaci.html">
+                                            Perfil
+                                        </a>
+                                    </li>
+                                    <!-- <li class="d-flex lista  flex-wrap">
+                                        <a class="nav-link color " href="../Citas/Citas.html">
+                                            Citas
+                                        </a>
+                                    </li> -->
+
+                                    <li class="d-flex lista  flex-wrap">
+                                        <a class="nav-link color " href="../Paciente/VistaDoctor.html">
+                                            Citas
+                                        </a>
+                                    </li>
+
+                                    <li class="d-flex lista  flex-wrap">
+                                        <a class="nav-link color " href="">
+                                            Historial Citas
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+
+                </article>
+                <article class="col-md-9  caja2">
+                    <br>
+
+                    <div class="row justify-content-evenly d-flex flex-wrap">
+
+                        <form class="  container   " name="formulario1" action="#">
+                            <label for="especialidad"
+                                class="p container  d-flex justify-content-center col-10 ">Especialidades:</label>
+                            <select class="seleccionar container d-flex justify-content-center" name="cosa"
+                                onchange="cambia()">
+                                <option value="0">Seleccione la Especialidad
+                                <option value="1">Medico General
+                                <option value="2">Pediatra
+                            </select>
+                            <br>
+                            <label for="especialidad" class="p container  d-flex justify-content-center col-10">Doctores
+                                disponibles:</label>
+                            <select class="seleccionar2 container  d-flex justify-content-center" name="opt">
+                                <option value="-">
+                            </select>
+
+                        </form>
+
+                        <script type="text/javascript">
+                            //1) Definir Las Variables Correspondintes
+                            var opt_1 = new Array("Seleccione el doctor", "Andres Gonzales", "Alberto Muñoz", "Maria Clara", "...");
+                            var opt_2 = new Array("Seleccione el doctor", "Luis  Muñoz", "Alex Pino", "Alejandra Ortiz", "...");
+                            // 2) crear una funcion que permita ejecutar el cambio dinamico
+
+                            function cambia() {
+                                var cosa;
+                                //Se toma el vamor de la "cosa seleccionada"
+                                cosa = document.formulario1.cosa[document.formulario1.cosa.selectedIndex].value;
+                                //se chequea si la "cosa" esta definida
+                                if (cosa != 0) {
+                                    //selecionamos las cosas Correctas
+                                    mis_opts = eval("opt_" + cosa);
+                                    //se calcula el numero de cosas
+                                    num_opts = mis_opts.length;
+                                    //marco el numero de opt en el select
+                                    document.formulario1.opt.length = num_opts;
+                                    //para cada opt del array, la pongo en el select
+                                    for (i = 0; i < num_opts; i++) {
+                                        document.formulario1.opt.options[i].value = mis_opts[i];
+                                        document.formulario1.opt.options[i].text = mis_opts[i];
+                                    }
+                                } else {
+                                    //si no habia ninguna opt seleccionada, elimino las cosas del select
+                                    document.formulario1.opt.length = 1;
+                                    //ponemos un guion en la unica opt que he dejado
+                                    document.formulario1.opt.options[0].value = "-";
+                                    document.formulario1.opt.options[0].text = "-";
+                                }
+                                //hacer un reset de las opts
+                                document.formulario1.opt.options[0].selected = true;
+
+                            }
+
+                        </script> 
+                    <section class="botones container-fluid col-4 d-flex justify-content-evenly">
+
+                        <button type="submit" class="btn btn-primary">Cancelar</button>
+                        &nbsp;
+                        <button type="submit" class="btn btn-primary">Aceptar</button>
+
+                    </section>
+            </div>
+            </article>
+        </div>
+        </div>
+
+
+    </section>
+    <br>
+    <footer class=" flex-wrap fuente bloque footer">
+        <div class="centrar">
+            <div class="izquierda">
+                <h4>Contactanos</h4>
+                <br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa excepturi atque ab neque, soluta
+                    eos
+                    sit perspiciatis. Perspiciatis perferendis atque minima quia incidunt. Laboriosam voluptate
+                    harum et
+                    quam, molestiae sit?
+                </p><br>
+                <ul>
+                    <li><img src="img/whatsapp (1).png" alt=""><b>WHATSAPP:</b> 306487090</li>
+                    <li><img src="img/instagram (1).png" alt=""><b>INSTAGRAM:</b> Instagram/DocHome.com</li>
+                    <li><img src="img/facebook.png" alt=""><b>FACEBOOK:</b> Facebook/DocHome.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="centrar">
+            <p class="pie">
+                Todos los derechos reservados (c) - Creado por Aprendicez ADSI 2338357
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
