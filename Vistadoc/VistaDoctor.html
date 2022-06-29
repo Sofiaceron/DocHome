@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="vistad.css">
     <link rel="stylesheet" href="perfil.css">
     <link rel="stylesheet" href="paginap.css">
+    <link rel="stylesheet" href="citas.css">
     <title>Mi Perfil - DocHome</title>
 </head>
 
@@ -72,6 +73,61 @@
                 </article>
                 <article class="col-md-9  caja2">
                     <br>
+
+                        <form class="  container   " name="formulario1" action="#">
+                            <label for="especialidad"
+                                class="p container  d-flex justify-content-center col-10 ">Especialidades:</label>
+                            <select class="seleccionar container d-flex justify-content-center" name="cosa"
+                                onchange="cambia()">
+                                <option value="0">Seleccione la Especialidad
+                                <option value="1">Medico General
+                                <option value="2">Pediatra
+                            </select>
+                            <br>
+                            <label for="especialidad" class="p container  d-flex justify-content-center col-10">Doctores
+                                disponibles:</label>
+                            <select class="seleccionar2 container  d-flex justify-content-center" name="opt">
+                                <option value="-">
+                            </select>
+
+                        </form>
+
+                        <script type="text/javascript">
+                            //1) Definir Las Variables Correspondintes
+                            var opt_1 = new Array("Seleccione el doctor", "Andres Gonzales", "Alberto Muñoz", "Maria Clara", "...");
+                            var opt_2 = new Array("Seleccione el doctor", "Luis  Muñoz", "Alex Pino", "Alejandra Ortiz", "...");
+                            // 2) crear una funcion que permita ejecutar el cambio dinamico
+
+                            function cambia() {
+                                var cosa;
+                                //Se toma el vamor de la "cosa seleccionada"
+                                cosa = document.formulario1.cosa[document.formulario1.cosa.selectedIndex].value;
+                                //se chequea si la "cosa" esta definida
+                                if (cosa != 0) {
+                                    //selecionamos las cosas Correctas
+                                    mis_opts = eval("opt_" + cosa);
+                                    //se calcula el numero de cosas
+                                    num_opts = mis_opts.length;
+                                    //marco el numero de opt en el select
+                                    document.formulario1.opt.length = num_opts;
+                                    //para cada opt del array, la pongo en el select
+                                    for (i = 0; i < num_opts; i++) {
+                                        document.formulario1.opt.options[i].value = mis_opts[i];
+                                        document.formulario1.opt.options[i].text = mis_opts[i];
+                                    }
+                                } else {
+                                    //si no habia ninguna opt seleccionada, elimino las cosas del select
+                                    document.formulario1.opt.length = 1;
+                                    //ponemos un guion en la unica opt que he dejado
+                                    document.formulario1.opt.options[0].value = "-";
+                                    document.formulario1.opt.options[0].text = "-";
+                                }
+                                //hacer un reset de las opts
+                                document.formulario1.opt.options[0].selected = true;
+
+                            }
+
+                        </script> 
 
                     <form class=" buscar container d-flex col-2 justify-content-center ">
                         <input class="form-control col-6 " type="search" placeholder="Buscar">
