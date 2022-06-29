@@ -5,53 +5,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+        rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="login.css">
+    <title>Login</title>
 </head>
+<title>Iniciar secion</title>
+<br>
 
+<div>
+    <h1 class="container logo shadow d-block d-sm-flex d-flex">DOC-HOME</h1>
+</div>
+<body >
 <body>
-    <div class="container login-container">
-        <div class="row">
-            <div class="col-md-6 login-form-1">
-                <h3>Login for Form 1</h3>
-                <form>
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Your Email *" value="" />
-                    </div>
-                    <div class="form-group">
-                        <input type="password" class="form-control" placeholder="Your Password *" value="" />
-                    </div>
-                    <div class="form-group">
-                        <input type="submit" class="btnSubmit" value="Login" />
-                    </div>
-                    <div class="form-group">
-                        <a href="#" class="ForgetPwd">Forget Password?</a>
-                    </div>
-                </form>
-            </div>
-            <div class="col-md-6 login-form-2">
-                <h3>Login for Form 2</h3>
-                <form>
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Your Email *" value="" />
-                    </div>
-                    <div class="form-group">
-                        <input type="password" class="form-control" placeholder="Your Password *" value="" />
-                    </div>
-                    <div class="form-group">
-                        <input type="submit" class="btnSubmit" value="Login" />
-                    </div>
-                    <div class="form-group">
+    <article class="container-fluid fondo p-2">
+        
+        <br>
+        <header>
+            <h3 class="container d-flex justify-content-center">Iniciar sesion</h3>
+        </header>
 
-                        <a href="#" class="ForgetPwd" value="Login">Forget Password?</a>
-                    </div>
-                </form>
+        <article class="caja d-flex container-fluid flex-column ">
+            <br>
+            <div class="col-10 ">
+            
+                <label for="correo" class="form-label fw-semibold">Correo Electronico</label>
+                <input type="email" class="form-control"> </input>
             </div>
-        </div>
-    </div>
+
+            <div class="col-10 ">
+                <label for="contraseña" class="form-label fw-semibold">Contraseña</label>
+                <input type="password" class="form-control"> </input>
+            </div>
+            <br>
+
+        </article>
+
+        <section class="botones container-fluid col-5 d-flex justify-content-evenly">
+
+            <button type="submit" class="btn btn-info"><a class=" bot text-decoration-none" href="../Pagina Principal/index.html">  Cancelar </a></button>
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            <button type="submit" class="btn btn-info"><a class=" bot text-decoration-none" href="Perfil.html"> Iniciar secion </a></button>
+
+        </section>
+
+
+
+
+
+    </article>
+
+
 </body>
 
 </html>
